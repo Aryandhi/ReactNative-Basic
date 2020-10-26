@@ -1,0 +1,7 @@
+React native dibuat untuk membuat User interface yang bisa di run pada mobile platform. Sekali kita belajar React kita bisa implementasinya pada Android dan IOS.
+Kenapa kita perlu belajar React Native, Keunggulannya adalah 
+- Dengan kita belajar sekali kita bisa terapkan dimana saja. 
+- Dibuat dengan JS namun di Render didalam mobile menjadi native apps
+- Secara struktur sama dengan JS pada Web, sehingga bisa di duplikasi diweb maupun apps
+- Dalam proses development dapat merefresh sebuah proses perubahan
+- Banyak perusahaan besar menggunakan React Native sbg aplikasi mobile, dan bisa bersaing sbg crossplatform teknologi.
