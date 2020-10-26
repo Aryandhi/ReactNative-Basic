@@ -7,6 +7,7 @@ App Prerequresit
 - Struktur Project React Native
 - Project Repository online
 - Extensi VS Code untuk React Native
+
 React Native Basic
 - Konsep dasar komponen React Native
 - Membuat komponen (hooks)
