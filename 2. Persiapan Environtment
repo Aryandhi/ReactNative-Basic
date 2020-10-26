@@ -1,0 +1,10 @@
+Setelah mengenal apa itu React Native, kita lanjutkan dengan persiapan Environtmentnya....
+
+Pertama yang harus di install
+1. Node JS
+why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
+- kunjungi web https://nodejs.org/en/ dan bisa klik download pada navigator
+- sesuaikan dengan spesifikasi OS perangkat.
+- Setelah berasil download dan install kita bisa cek versinya dengan node -v  pada cmd atau terminal
+  a. masuk ke direktori D: (karena install di D:)
+  b. lalu ketik node -v
