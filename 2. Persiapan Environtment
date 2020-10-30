@@ -20,6 +20,9 @@ why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
 - pilih os target aplikasi yang mau dibuat
 - install jdk https://www.oracle.com/java/technologies/javase-downloads.html
 - konfigurasi path
-- React native command line interface
-- Membuat project baru
-  a. cmd -> npx react-native init AwesomeProject
+  a. buka control panel -> user acount -> user acount -> change variable path
+  b. klik new ANDROID_HOME lalu C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools kemudian simpan
+  c. restart laptop
+  d. buka powershell (admin) -> Get-ChildItem -Path Env:\ , lihat apakah ANDROID_HOME sudah terdaftar pada perangkat
+  e. ulangi step a, pilih path -> edit -> tambah C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools -> simpan
+
