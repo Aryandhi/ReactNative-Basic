@@ -34,8 +34,8 @@ why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
 - install jdk https://www.oracle.com/java/technologies/javase-downloads.html
 - konfigurasi path
   a. buka control panel -> user acount -> user acount -> change variable path
-  b. klik new ANDROID_HOME lalu C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools kemudian simpan
+  b. klik new pada Ssystem (Bagianbawah) ANDROID_HOME lalu C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools kemudian simpan
   c. restart laptop
   d. buka powershell (admin) -> Get-ChildItem -Path Env:\ , lihat apakah ANDROID_HOME sudah terdaftar pada perangkat
-  e. ulangi step a, pilih path -> edit -> tambah C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools -> simpan
+  e. ulangi step a, pilih path pada Ssystem (Bagianbawah) -> edit -> tambah C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools -> simpan
 
