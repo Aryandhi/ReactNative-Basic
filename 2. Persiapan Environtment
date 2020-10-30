@@ -1,5 +1,18 @@
 Setelah mengenal apa itu React Native, kita lanjutkan dengan persiapan Environtmentnya....
 
+pengantar (optional)
+1. install chocolaty
+sebuah package manager yang memungkinkan kamu melakukan instalasi software cukup dengan memberikan perintah via cmd/poweshell
+dibandingkan dengan kita harus download aplikasinya dulu kemudian double klik di aplikasinya.
+
+- buka cmd -> 
+=====================================================================
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" 
+-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" 
+&& SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+====================================================================
+copas link diatas
+
 Pertama yang harus di install
 1. Node JS
 why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
