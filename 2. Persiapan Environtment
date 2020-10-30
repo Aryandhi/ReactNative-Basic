@@ -8,3 +8,18 @@ why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
 - Setelah berasil download dan install kita bisa cek versinya dengan node -v  pada cmd atau terminal
   a. masuk ke direktori D: (karena install di D:)
   b. lalu ketik node -v
+2. install android studio
+- https://developer.android.com/studio
+- https://developer.android.com/studio/intro?hl=id (versi indo)
+4. Install vs code
+5. Install extension vscode
+6. Environtment setup react native
+- kunjungi web https://reactnative.dev/docs/environment-setup
+- pilih antara Expo CLI )apps simnple) atau React native CLI (app kompleks)
+- pilih os
+- pilih os target aplikasi yang mau dibuat
+- install jdk https://www.oracle.com/java/technologies/javase-downloads.html
+- konfigurasi path
+- React native command line interface
+- Membuat project baru
+  a. cmd -> npx react-native init AwesomeProject
