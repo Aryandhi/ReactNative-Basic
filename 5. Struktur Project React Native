@@ -1,4 +1,31 @@
 Kita buka Editor (Vs code)
 a. kita bisa buka dengan mencari file vscode pada os laptop
 b. kita bisa menggunakan terminal dengan ketik -> code .
-c. break
+
+Struktur projek
+- yarn.lock (dari yg paling bawah ada) merupakan kumpulan aktivitas yg kita lakukan dengan yarn, contohnya kita menambah package atau library.
+- package.json merupakan tempat tersimpannya bundle dari aplikasi yg menyimpan semua informasi library yg digunakan dan script yg bisa dijalankan melalui ion atau npm
+  ex. dalam package.json terdapat informasi
+  - name -> nama projek
+  - version -> versi dari aplikasi
+  - private
+  - script, dll
+  /* informasi detail tentang projek 
+    dependencies merupakan package yg dipakai untuk proses production
+    devDependencies merupakan package yg dipakai untuk proses development
+    jest merupakan package yg dipakai untuk testing
+  */
+- index.js merupakan struktur yg pertama kali dilihat dari aplikasi
+   - kerja dari index.js ini ialah mengimpor kebutuhan aplikasi
+   - dan melakukan register aplikasi kita sehingga bisa compile
+   - file index.js akan membangun kerangka aplikasi dari struktur appName.
+   - struktur appName bisa kita lihat pada app.json
+   - pada app.json terdapat n2 struktur yaitu nama projek dan nama dispaly aplikasi
+   - kemudian akan membaca import App from './App'; (terdapat dalam file App.js) file inilah yang tampil pada halaman utaman aplikasi
+   - pada .pretierrc.js dan eslint.js berguna untuk merapikan struktur pada kodingan kita dan menampilkan informasi error
+   - node.module ialah tempat kumpulan package yg kita perlukan dalam membangun sebuah aplikasi
+   - ios merupakan tempat native untuk ios (artinya ini berjalan terpisah dan bisa dilakukan sedikit setup bila diperlukan)
+   - android merupakan tempat native untuk android (artinya ini berjalan terpisah dan bisa dilakukan sedikit setup bila diperlukan)
+   - gitignore bertujuan agar kita bisa mengecualikan beberapa file 
+   Lalu dimana kita akan berkerja, kita akan mulai production pada file App.js dan membuat folder baru rsc.
+   2 folder ini yang sering kita ubah untuk kepentingan production.
