@@ -1,0 +1,15 @@
+Untuk debuging atau melihat hasil code kita pada aplikasi, kita bisa menggunakan emulator.
+cara untuk aktifkan emulator kita bisa membuka android studio lalu setting bagian AVD manager.
+cara ini cukup memakan waktu dan memori, cara lainnya kita bisa menggunakan terminal
+a. menjalankan emualotor dengan terminal
+   - buka terminal dan arahkan pada folder sdk -> D:\Sdk\emulator
+   - lalu untuk melihat daftar emulator yang tersedia pada laptop kita -list-avds
+   - setelah itu kita bisa pilih dari salah satu dan langsung menjalankannya dengan perintah ->  -avd namaEmulator
+b. Menjalankan server react native dengan perintah -> npm start
+   - selain npm start kita bisa juga menggunakan yarn start (salah satu)
+   - jika ada error dalam runing server maka kita bisa membuat file baru dalam folder android didalam projek kita
+     - caranya ialah buka projek kita, lalu cari folder android
+     - buat file -> local.properties -> lalu tambahkan sdk.dir = D:/Android/Sdk    (letak folder sdk)
+     - lalu kembali ke terminal dan jalankan npm run start atau npm start atau yarn start
+c. Menjalankan debuging di real device dengan usb (tahapan bisa lihat di setup environtment)
+d. untuk menampilkan layar p dilaptop kita bisa pakai teknik miroring dan alat airdroid -> ngulik lebih dalam (optional)
