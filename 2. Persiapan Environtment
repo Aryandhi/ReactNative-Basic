@@ -1,41 +1,41 @@
-Setelah mengenal apa itu React Native, kita lanjutkan dengan persiapan Environtmentnya....
+install reactnative dengan yukcoding
+a. Download node.js dan install https://nodejs.org/en/ -> C:\Program Files\nodejs
+   - cek versi "node -v"
+   - cek "npm -v"
+b. Download JDK https://www.oracle.com/java/technologies/javase-downloads.html
+   dan install -> C:\Program Files\Java\jdk-15.0.1
+c. Download android studio https://developer.android.com/studio/intro?hl=id (versi indo) -> install -> setup SDK -> D:\Android\Sdk
+   - Android 6.0
+   - Google API
+   - Android SDK platform 23
+   - Source for android 23
 
-pengantar (optional)
-1. install chocolaty
-sebuah package manager yang memungkinkan kamu melakukan instalasi software cukup dengan memberikan perintah via cmd/poweshell
-dibandingkan dengan kita harus download aplikasinya dulu kemudian double klik di aplikasinya.
+   - Android SDK build tools
+   - Android Emulator
+   - Android SDK platform tools
+   - intel x86 emulator accelator (HAXM installer)
+d. Download dan install vscode 
+e. install ekstensi vscode ->https://www.youtube.com/watch?v=n4_z8289WRM&t=936s
+f. Download react native https://reactnative.dev/docs/environment-setup
+   Install React native -> npm install -g react-native-cli
+   - cek versi react native "react-native --version"
+g. membuat aplikasi baru -> "react-native init awesomeproject"
+   - sambil menunggu proses create project, kita aktifkan developer mode pada real device ( sesuaikan smartphone)
+     caranya kita koneksikan hp dan laptop dengan usb, lalu masuk ke opsi pengembang, aktifkan developer mode dan debuging usb
+   - cek koneksi devices dengan laptop, caranya -> cmd -> cd D:\Android\Sdk\platform-tools -> adb devices
+   - lalu akan tampil " xxxxx   device" artinya device kita siap digunakan untuk debuging
 
-- buka cmd -> 
-=====================================================================
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" 
--NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" 
-&& SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-====================================================================
-copas link diatas
+   setelah berhasil cek device dan berhasil buat projek baru, kita masuk ke folder projek
+   - cmd -> cd folder projek
+   - untuk compile pertama kali dan hanya sekali ketik cmd -> react-native run-android
+     *note selama run-android pada device pastikan firewall&protection dan virus&protection pada laptop mati.
+      karena kalau dalam status on akan terbaca virus dan menghambat debuging
+   - bila sukses akan tampil keterangan BUILD SUCCESFULL
+   - bila ada error kita menuju cmd -> cd D:\Android\Sdk\platform-tools -> ketik adb reverse tcp
 
-Pertama yang harus di install
-1. Node JS
-why ? karena Node.js termasuk js Runtime agar support JS Library didalamnya.
-- kunjungi web https://nodejs.org/en/ dan bisa klik download pada navigator
-- sesuaikan dengan spesifikasi OS perangkat.
-- Setelah berasil download dan install kita bisa cek versinya dengan node -v  pada cmd atau terminal
-  a. masuk ke direktori D: (karena install di D:)
-  b. lalu ketik node -v
-2. install android studio
-- https://developer.android.com/studio
-- https://developer.android.com/studio/intro?hl=id (versi indo)
-4. Install vs code
-5. Install extension vscode
-6. Environtment setup react native
-- kunjungi web https://reactnative.dev/docs/environment-setup
-- pilih antara Expo CLI )apps simnple) atau React native CLI (app kompleks)
-- pilih os
-- pilih os target aplikasi yang mau dibuat
-- install jdk https://www.oracle.com/java/technologies/javase-downloads.html
-- konfigurasi path
-  a. buka control panel -> user acount -> user acount -> change variable path
-  b. klik new pada Ssystem (Bagianbawah) ANDROID_HOME lalu C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools kemudian simpan
-  c. restart laptop
-  d. buka powershell (admin) -> Get-ChildItem -Path Env:\ , lihat apakah ANDROID_HOME sudah terdaftar pada perangkat
-  e. ulangi step a, pilih path pada Ssystem (Bagianbawah) -> edit -> tambah C:\Users\ariyandhi.a.w\AppData\Local\Android\Sdk\platform-tools -> simpan
-
+   setelah berhasil compile dan install on real device, kita bisa debuging tanpa menggunakan usb
+   - arahkan cmd ke projek -> npm start
+   - buka aplikasi pada hp, dan reload jika error maka cari menu other
+   - pilih dev setting -> debug server host & port for device
+   - masukan alamat ipv4 yg dilaptop pada hp ex 192.168.1.3:8081  (8081 adalah port)
+   - kita juga bisa aktifkan live reload agar bisa save otomatis
