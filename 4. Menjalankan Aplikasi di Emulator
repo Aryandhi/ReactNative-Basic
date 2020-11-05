@@ -12,4 +12,4 @@ b. Menjalankan server react native dengan perintah -> npm start
      - buat file -> local.properties -> lalu tambahkan sdk.dir = D:/Android/Sdk    (letak folder sdk)
      - lalu kembali ke terminal dan jalankan npm run start atau npm start atau yarn start
 c. Menjalankan debuging di real device dengan usb (tahapan bisa lihat di setup environtment)
-d. untuk menampilkan layar p dilaptop kita bisa pakai teknik miroring dan alat airdroid -> ngulik lebih dalam (optional)
+d. untuk menampilkan layar hp dilaptop kita bisa pakai teknik miroring dan alat airdroid -> ngulik lebih dalam (optional)
