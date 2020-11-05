@@ -1,0 +1,42 @@
+Hai kembali lagi unutk belajr..
+Hari ini kita akan menyimpan codingan ke Repository online, lets get !
+
+repo yang terkenal bitbucket, github, dan gitlab
+pada module ini kita akan menggunakan repo bitbucket
+
+Step 1
+- Buat Repo dengan klik btn "Create Repo"
+- Lalu memberi nama Repo dan unceklis bila Repo bersifat umum 
+- atau biarkan saj ceklisnya bila Repo bersifat Private
+
+Step 2 - Clone projek ke local (Laptop kita )
+- a. Buka terminal dan masuk ke projek
+- Untuk pertama dalam membuat projek ada baiknya kita cek lebih dulu, apakah projek yg baru dibuat tsb sudah di inisiasi ke repo online ?
+  b. cara cek nya kita ketikan -> git status
+     bila tampil pesan "not a git repository....." berarti projek kita belum terhubung ke Repo online
+- Karena Repo kita belum terinisialisasi dg repo online 
+  c. maka kita ketika -> git init
+     git init dimaksud untuk inisialisasi projek kita ke git, agar setiap perubahannya tercatat oleh git.
+     dg run perintah git init secara default kita akan dibuatkan branch master.
+  d. lalu kita cek lagi dg -> git status
+     nah disini akan tampil folder apa saja (berwarna merah) yang perubahannya akan terekam di git kita.
+     kecuali folder gitignore , perubahan apapun pd git ignore tidak akan terekam pada git
+- selanjutnya kita koneksikan git kita dengan repo online (bitbucket atau remote url)
+  kita menyalin url repo kita pada website repository di profile kita lalu pilih clone dansalin url https nya aja
+  e. ketik perintah git remote add origin urlRepoKita ,pada terminal kita.
+- lalu kita masukan semua kodingan kita atau semua perubahan kodingan kita di repo online
+  ibaratnya kita punya ember kosong sbg media untuk menuangkan semua kodingan kita ke repo online.
+  Nah sebelum semua peruabahan code kita di upload ke repo online maka kita tampung sulu perubahan code tsb pada ember kosong tadi.
+  f. ketikan perintah -> git add .
+  g. lalu cek lagi dg perintah -> git status
+     semua nama folder yg tampil akan berwarna hijau. artinya terdapat perubahan dari merah (saat awal git init) ke warna hijau (setalah git add . )
+- sebelum upload ke repo kita berikan nama dan deskripsi pada ember tsb.
+  deskripsi bisa kita buat se simple mungkin atau se detail mungkin, untuk mempermudah tracking perunahan pada projek kita.
+  h. ketikan perintah git commit -m "detail deskripsi" -> lalu enter (untuk deskripsi yg detail kita gunakan shif+enter)
+  i. setelah selesai membuat deskripsi tekan enter untuk menyimpan
+     akan tampil perubahan folder dengan tulisan create mode, pada tahap ini kita siap upload perubahan coding kita ke repo online
+- lalu kita simpan ember perubahan tadi di repo online kita
+  peyimpanan peruabahan codingan tadi tersimpan di branch master
+  j. ketik perintah -> git push origin master
+  
+  
