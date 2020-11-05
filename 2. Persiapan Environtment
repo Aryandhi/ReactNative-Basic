@@ -3,7 +3,7 @@ a. Download node.js dan install https://nodejs.org/en/ -> C:\Program Files\nodej
    - cek versi "node -v"
    - cek "npm -v"
 b. Download JDK https://www.oracle.com/java/technologies/javase-downloads.html
-   dan install -> C:\Program Files\Java\jdk-15.0.1
+   dan install -> C:\Program Files\Java\jdk1.8.0_111
 c. Download android studio https://developer.android.com/studio/intro?hl=id (versi indo) -> install -> setup SDK -> D:\Android\Sdk
    - Android 6.0
    - Google API
