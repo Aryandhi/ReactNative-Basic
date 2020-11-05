@@ -1,4 +1,4 @@
-Hai kembali lagi unutk belajr..
+Hai kembali lagi untuk belajar..
 Hari ini kita akan menyimpan codingan ke Repository online, lets get !
 
 repo yang terkenal bitbucket, github, dan gitlab
@@ -38,5 +38,27 @@ Step 2 - Clone projek ke local (Laptop kita )
 - lalu kita simpan ember perubahan tadi di repo online kita
   peyimpanan peruabahan codingan tadi tersimpan di branch master
   j. ketik perintah -> git push origin master
+     bila eror kita bisa menggunakan git push origin master -f atau git push origin master --force
+     
+Step 3 fungsi lain dari git status
+- sesuai namanya git status biasa kita gunakan untuk melihat perubahan atau kondisi terkini file.
+- dengan ketik git status setelah melakukan perubahan, umumnyanakan tampil modified file
+  yg artinya ada sebuah file yang telah mengalami perubahan. lalu bagaimana melihat detail perubahan dg cmd ?
+- untuk melihat detail perubahan kita bisa ketik perintah git diff app.js (Atau file yang mengalami perubahan)
+  akan tampil code yang berwarna merah memiliki arti itu code yg terhapus.
+  
+Step 4. Melihat update dari vscode
+- kita bisa klik icon source control disebelah kiri
+- lalu klik 
+- kita akan ditampilkan 2 file. file yg mengalami perubahan dan file sebelum dirubah
+  
+Step 5 Melakukan perubahan terus menerus
+- setelah berhasil melakukan setup ke repo online tentunya secara berkala kita pasti melkaukan perubahan pada aplikasi/projek kita
+  lalu bagaimana alur untuk mengelola code selanjutnya ?
+  a. setiap selesai melakukan update code pada aplikasi kita, maka ketik perintah git add .
+     git add . ini dg tujuan menyimpan update pada ember
+  b. ketik perintah git status agar kita mengetahui status code, apakh sudah dimasukan ke ember atau belum ?
+  c. jika yakin sudah, maka kita beri commit dengan git commit -m "deskripsi perubahan"
+  d. lalu kirim ke repo dg git push origin master (atau tambhakan -f atau --force)
   
   
