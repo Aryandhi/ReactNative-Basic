@@ -1,0 +1,11 @@
+Component adalah suatu bagian dari aplikasi
+Dalam suatu Component bisa terdiri dari Component-component lain (yg lebih kecil) ex. Component buttom navigation yg terdiri dari beberapa Component
+referensi reactnative.dev (memuat komponen basic)
+Basic Component terdiri dari 6 bagian
+a. Component view ialah suatu komponen untuk membungkus suatu komponen
+b. Text ialah suatu komponent untuk memunculkan sebuah text
+c. Image ialah komponen untuk memanggil sebuah image
+d. Text Input ialah sebuah komponen untuk menerima input dari user
+4 komponen diatas dapat kita gunakan untuk membentuk suatu aplikasi
+e. Scroll view untuk memungkinkan agar aplikasi bisa scroll view
+f. Stylesheet untuk memberi style pada komponenyg lain
