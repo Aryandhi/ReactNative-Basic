@@ -1,0 +1,138 @@
+Pada module ini kita menggunakan projek latihan2
+1 file app.js bisa kita sebut component (besar)
+
+Bagaimana sih, cara membuat Component ?
+Untuk membuat Component bisa dilakukan dg 2 cara
+- functional component
+- class component
+
+kita mulai dg functional component
+Cara 1 dikenal dg arrow function
+- Kita Coba menampilkan komponen text
+  a. kita buat 
+     > import React from 'react';
+     > import {Text} from 'react-native';
+     hal ini berarti kita mengimport Component <Text> dari React-native
+  b. kita mulai dg membuat functional component
+     > const namaKomponen = () =>  {
+     >    return <Text> Aryandhi </Text>
+     > }
+  c. kita buat export
+     > export default namaKomponen;
+     
+- Kita Coba menampilkan komponen view
+  a. kita buat 
+     > import React from 'react';
+     > import {Text, View} from 'react-native';
+     hal ini berarti kita mengimport Component <Text> dari React-native
+  b. kita mulai dg membuat functional component
+     > const namaKomponen = () =>  {
+     >    return
+     >      <View>
+     >        <Text> Aryandhi </Text>
+     >        <Text> Arief </Text>
+     >        <Text> Windiarto </Text>
+     >      </View>
+     > }
+  c. kita buat export
+     > export default namaKomponen;
+
+Pada teknik diatas, kita hanya bisa membuat 1 komponen, mengapa ?
+karena file index.js (satu-satunya file yg dibaca pertama kali, dan tempat setup aplikasi)
+hanya membaca import berupa <Text> atau import berupa bungkus <View> saja ( PERHATIKAN ! LINE 13)
+
+Lalu bagaimana caranya kita membuat banyak komponen ?
+- Kita akan coba membuat 2 function.
+  cara kerjanya function pertama memanggil function ke 2 agar tampil
+  a. kita buat 
+     > import React from 'react';
+     > import {Text, View} from 'react-native';
+     hal ini berarti kita mengimport Component <Text> dari React-native
+  b. kita mulai dg membuat functional component
+     > const namaKomponenA = () =>  {
+     >    return
+     >      <View>
+     >        <Text> Aryandhi </Text>
+     >        <Text> Arief </Text>
+     >        <Text> Windiarto </Text>
+     >        <namaKomponenB/>            ----> ini adalah function komponen
+     >      </View>
+     > }
+     >
+     > const namaKomponenB = () => {
+     >   return <Text> Hobi ngulik </Text>
+     > }
+     *pada kondisi diatas isi dari tag <namaKomponenB> pada line 57 akan mengikuti isi dari namaKomponenB pada line 61
+  c. kita buat export
+     > export default namaKomponen;
+     
+- Kita akan coba membuat  lebih dari 2 function (termasuk pengembangan dari line 45)
+  disini kita akan memanggil komponen <View> menggunakan Komponen <View> juga.
+  a. kita buat 
+     > import React from 'react';
+     > import {Text, View} from 'react-native';
+     hal ini berarti kita mengimport Component <Text> dari React-native
+  b. kita mulai dg membuat functional component
+     > const namaKomponenA = () =>  {
+     >    return
+     >      <View>
+              <View style={width:80, height:80, backgroundcolor: '#3498db'}
+     >        <Text> Aryandhi </Text>
+     >        <Text> Arief </Text>
+     >        <Text> Windiarto </Text>
+     >        <namaKomponenB/>            ----> ini adalah function komponen
+     >      </View>
+     > }
+     >
+     > const namaKomponenB = () => {
+     >   return <Text> Hobi ngulik </Text>
+     > }
+  *pada kondisi diatas isi dari tag <namaKomponenB> pada line 57 akan mengikuti isi dari namaKomponenB pada line 61
+  *pada kondisi diatas kita berhasil membuat kotak berwarna biru (disebut view)
+  c. kita buat export
+     > export default namaKomponen;
+     
+- Kita akan coba membuat image view dan TextInput
+  kita bisa tambahkan <Image> pada point b dibawah ini atau kita buat functional componen baru
+  pengembangan dari line 69
+  a. kita buat 
+     > import React from 'react';
+     > import {Text, View, Image, TextInput} from 'react-native';
+     hal ini berarti kita mengimport Component <Text> dari React-native
+  b. kita mulai dg membuat functional component
+     > const namaKomponenA = () =>  {
+     >    return
+     >      <View>
+              <View style={width:80, height:80, backgroundcolor: '#3498db'}
+     >        <Text> Aryandhi </Text>
+     >        <Text> Arief </Text>
+     >        <Text> Windiarto </Text>
+     >        <namaKomponenB/>            ----> ini adalah function komponen
+     >        <namaKomponenC/>
+     >        <TextInput style={{borderwidth: 1}}/>
+     >      </View>
+     > }
+     >
+     > const namaKomponenB = () => {
+     >   return <Text> Hobi ngulik </Text>
+     > }
+     >
+     > const namaKomponenC = () => {
+     >   return <Image source={{uri:'http://placeimg.com/100/100/tech'}} style={{width:100, height:100}} />
+     > }
+  *pada kondisi diatas isi dari tag <namaKomponenB> pada line 57 akan mengikuti isi dari namaKomponenB pada line 61
+  *pada kondisi diatas kita berhasil membuat kotak berwarna biru (disebut view)
+  c. kita buat export
+     > export default namaKomponen;
+
+Sampai tahap ini kita sudah membuat component React-native dgn Functional Komponen.
+Beberapa setup tambahan yg saya lakukan:
+1. Saat membuat TextInput saya device saya mengalami kendala yaitu keyboardnya tidak mau tampil,saat TextInput di tap.
+   akhirnya bersumber dari https://stackoverflow.com/questions/62706889/react-native-android-textinput-fail-to-show-keyboard
+   kwyboard kembali tampil setelah ditap.
+   
+   
+Cara 2 
+> function namaKomponen() {
+>
+> }
