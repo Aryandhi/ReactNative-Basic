@@ -1,0 +1,21 @@
+Kali ini kita akan membuat Componen dengan Class Component
+Caranya ?
+
+A. Class component kita buat terpisah dari functional App
+
+>>  Class namaKomponenKelas extends Component {
+>>
+>>  };
+
+B. Lalu import Component
+
+>> import React, {Component} from 'react';
+
+C. Setelah itu kita buat render() lalu buat return
+
+>>  Class namaKomponenKelas extends Component {
+>>    render() {
+>>      return <Text> ini contoh Component yg dibuat dengan Class
+>>
+>>    );
+>>  };
