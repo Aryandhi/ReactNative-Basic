@@ -1,0 +1,39 @@
+oke kita lanjut lagi,,
+
+kali ini kita akan belajar memberi style pada component yg sudah kita buat.
+sebelumnya, agar Component yg lalu tidak hilang kita pindahkan semua Component yg terdapat pada function App ke suatu komponen baru
+1.  kita beri nama SampleComponent, berikut...
+
+      > const SampleComponent = () => {
+      >   return (
+      >     <View>
+      >     <View style={{width: 80, height:80, backgroundColor:'#3498db'}} />
+      >     <Text>Aryandhi</Text>
+      >    <Text>Arief</Text>
+      >     <Text>Windiarto</Text>
+      >     <KomponenCustom />
+      >     <Photo />
+      >     <TextInput style={{borderWidth:1}}></TextInput>
+      >     <Linetext />
+      >     <Gambar/>
+      >   </View>
+      >   )
+      > };
+
+    lalu kita return SampleComponent ke dalam Component App
+
+      > const App = () => {
+      >   return () {
+      >     <SampleComponent />
+      >   }
+      > }
+
+langkah pada line 25-29 kita lakukan agar tidak ada error
+
+2.  Lalu kita buat functional Component baru,
+
+      > const StylingReactNativeComponent = () => {
+      >   return (
+      >     <Text> Styling Basic react <Text/>
+      >   )
+      > }
