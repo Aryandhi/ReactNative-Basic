@@ -39,7 +39,7 @@ langkah pada line 25-29 kita lakukan agar tidak ada error
       > }
 3. Sekarang kita akan belajar tentang ukuran atau dimensi, topik di point ini kita akan urai ukuran fix.
    apa itu ukuran fix ?
-   > const StylingReactNativeComponent = () => {
+      > const StylingReactNativeComponent = () => {
       >   return (
       >     <View>
       >           <Text> Styling Basic react </Text>
@@ -56,3 +56,7 @@ langkah pada line 25-29 kita lakukan agar tidak ada error
       >     </View>
       >   )
       > }
+
+4. Kita juga bisa menggunakan Component Stylesheet, let get step :
+      > const styles = Stylesheet.create({
+      > });
