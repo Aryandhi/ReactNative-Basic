@@ -56,7 +56,70 @@ langkah pada line 25-29 kita lakukan agar tidak ada error
       >     </View>
       >   )
       > }
+   Duntuk memberikan style pada Componen kita dpat menggunakan 2 cara, yakni
+   - langsung pada tag Component tersebut
+   - menggunakan stylesheet.
+   Berikut adalah cara memberikan style dengan teknik stylesheet.
 
-4. Kita juga bisa menggunakan Component Stylesheet, let get step :
+4. Memberikan style dengan teknik stylesheet :
+   Kita buat Component stylesheet
+   
       > const styles = Stylesheet.create({
+      >     text: {
+      >        fontSize:18,
+      >        fontWeight:'bold'    //atau bisa menggunakan ukuran dari 100 sd 900
+      >        color: '#10c84'      // memberi warna pada text
+      >        marginLeft:20
+      >        marginTop:20
+      >     }
       > });
+      
+   Lalu kita implementasikan dengan cara memanggil komponen stylesheet kedalam Component App
+      
+      > const StylingReactNativeComponent = () => {
+      >   return (
+      >     <View>
+      >           <Text style={styles.text}> Styling Basic react </Text>
+      >           <View style={{width:100,
+      >                         height:100, 
+      >                         backgroundColor:'blue'
+      >                         borderWidth: 2        //untuk mempertebal border pada sebuah shape
+      >                         borderColor: 'red'    // bisa memakai hexa
+      >                         marginTop: 20         // satuan borderWidth, margin adala pixel
+      >                         marginLeft: 20        
+      >                         marginRight:20
+      >                         marginBottom: 20
+      >            }}> </View>
+      >     </View>
+      >   )
+      > }
+
+5. Teknik selanjutnya kita bisa style image 
+   Jika sebelumnya kita gunakan url untuk memasukan image dalam projek. Kali ini kita image akan kita simpan didalam aplikasi.
+   Lalu giaman cara memanggilnya ?
+   - pertama kita simpan dulu image dalam aplikasi (projek kita)
+   - lalu import iamge dg memberi nama image tersebut ( perhatian, nama yg diberikan pd image akan kita panggil pada Component App
+      > import namaImage from 'react-native'
+   - kemudian arahakan url direktori ke dalam Component App
+      > const StylingReactNativeComponent = () => {
+      >   return (
+      >     <View>
+      >           <Text style={styles.text}> Styling Basic react </Text>
+      >           <View style={{width:100,
+      >                         height:100, 
+      >                         backgroundColor:'blue'
+      >                         borderWidth: 2        //untuk mempertebal border pada sebuah shape
+      >                         borderColor: 'red'    // bisa memakai hexa
+      >                         marginTop: 20         // satuan borderWidth, margin adala pixel
+      >                         marginLeft: 20        
+      >                         marginRight:20
+      >                         marginBottom: 20
+      >            }}> </View>
+      >           <View> 
+      >                 <Image source={namaImage)
+      >           </View>
+      >     </View>
+      >   )
+      > }
+      
+terakhir pada menit 11.00           see you next time
