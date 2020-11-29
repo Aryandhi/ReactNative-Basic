@@ -1,0 +1,11 @@
+Hallo, inilah sebuah modul dari experiece error saya, hehehe
+
+1. Module AppRegistry is not a registered callable module (calling runApplication)
+    Awalnya saya ingin memisahkan Component pada App.js ke SampleComponent.js (atau file lain)
+    tetapi setelah merapihkan code, saya menemukan kendala pada npm yakni, 
+    " interface pada device tidak tampil, dan tidak ditemukan error, lalu saya coba kemablikan ke kondisi awal, error masih belum hilang."
+
+    solusi : 
+    a. matikan npm server
+    b. ketik perintah cmd -> npm start — reset-cache -> selesai
+    *references : https://medium.com/@adigunawanhidayat/memperbaiki-module-appregistry-is-not-registered-callable-module-calling-runapplication-react-929419df158e
