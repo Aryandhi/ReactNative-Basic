@@ -1,0 +1,36 @@
+Ayo kita lanjutkan dan perkuat lagi dasar React Native.... cekidot...
+
+Hai,, pada modul ini kita akan mulai dengan membuat scroll view pada aplikasi kita
+1. Scroll View
+   caranya, kita buat <ScrollView>
+   > const App = () => {
+   >   return () {
+   >     <ScrollView>
+   >        <SampleComponent />
+   >     </ScrollView>
+   >   }
+   > }
+   
+2. Teknik Export dan Import
+dalam membangun projek tentunya kita butuh banyak line pada lembar kerja. nah kamu harus paahami kalau hal demikian tentunya akan membingungkan
+developer lain. Untuk menghindari hal itu kita bisa terapkan teknik export dan import antar file....
+  a. Kita pisahkan <SampleComponent /> kesuatu file yg baru kita buat, bernama SampleComponent.js (setingkat dengan file App.js)
+     perlu diperhatikan, dalam cut Component kita harus teliti dengan sub component penyusun dari component besar, semisal ( <Image/> , <TextInput/>, <<View/>
+     harus ikut di cut juga disatukan dalam sebuah file bersama Component besarnya.
+  b. Setelah mebuat file baru bernama SimpleComponent.js dan memindahkan <SampleComponent/> maka akan terliat beberapa error. Hal ini terjadi karena kita belum
+     Import React, {Component} from 'react';
+     Import {View, Text, TextInput, Image} from 'react-native';
+  c. Agar file SampleComponent.js dapat diakses oleh file manapun, maka kita harus
+     > Export default SampleComponent;
+  d. Lalu kita buka App.js, lalu laukan import pada file App.js tujuannya memanggil SampleComponent dengan menarahkan pada url filenya didalm projek kita
+     > Import SampleComponent from './SampleComponent';
+  Teman-teman bisa repeat langkah diatas untuk merapihkan coding didalam file App.js agar terlihat rapih dan tidak memerlukan banyak Line.
+  
+  Hal umum yang perlu kita pahami bersama juga
+  a. Ternyata ada perbedaan antar "Export default namaComponent" dan "Export const namaComponent = () => {}"
+     - pada Export default namaComponent kita bisa panggil dengan "Import namaComponent from './file.js';
+     - tetapi pada 'Export const namaComponent = () => {}' teknik meamanggilnya dengan cara
+        > Import {namaComponent} from 'react-native';
+        
+  b. satu hal lagi, setelah kita membuat file.js yg setingkat dengan index.js kita bisa ubah arah index.js yg mulanya mengarah ke App.js
+  menjadi diarahkan ke fileOther.js (NAMUN INI TIDAK DIREKOMENDASIKAN !)
