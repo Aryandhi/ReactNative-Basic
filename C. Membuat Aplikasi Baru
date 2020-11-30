@@ -1,6 +1,7 @@
 a. membuat aplikasi baru -> "react-native init awesomeproject"
    - sambil menunggu proses create project, kita aktifkan developer mode pada real device ( sesuaikan smartphone)
-     caranya kita koneksikan hp dan laptop dengan usb, lalu masuk ke opsi pengembang, aktifkan developer mode dan debuging usb
+     caranya kita koneksikan hp dan laptop dengan usb, lalu masuk ke....
+     pengaturan tambahan -> opsi pengembang -> opsi pengembang (enable) -> scroll kebawah enable debuging usb
    - cek koneksi devices dengan laptop, caranya -> cmd -> cd D:\Android\Sdk\platform-tools -> adb devices
    - lalu akan tampil " xxxxx   device" artinya device kita siap digunakan untuk debuging
 
