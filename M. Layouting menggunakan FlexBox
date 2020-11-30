@@ -1,0 +1,165 @@
+Come to back GUYSSSSSS.... hehehe
+pada modul ini kita akan belajar layouting dengan flexbox.
+
+Kita bisa mulai dengan membuat Komponen Flexbox lebih dulu, dg teknik export dan import, nah kalau teman-teman lupa dengan teknik ini, bisa baca lagi modul ber-index L
+diatas ya...
+
+1. Membuat file baru dengan nama MateriFlexBox.js
+2. Membuat Component class pada file MateriFlexBox.js
+   > import React, {Component} from 'react';
+   >
+   > class MateriFlexBox extends Component {
+   >    render() {
+   >      return <Text> Kelas FlexBox </Text>
+   >    }
+   > }
+   >
+   > export default MateriFlexBox;
+   
+   ini Component dasar sbg contoh dari Component Flexbox yg akan kita export dan import ke kelas App.js
+3. Import FlexBox pada App.js
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View>
+   >        <MateriFlexBox />
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+4. Mengatur layout dengan FlexBox dengan viewChild memenuhi screen hp
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View>
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#feca57', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#1dd1a1', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#5f27cd', flex:1, height:50}}/>
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+**nilai flex bisa kita ganti dengan kebutuhan besarnya.
+   
+5. Membuat Row
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View style={{flexDirection:'row'}}>
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#feca57', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#1dd1a1', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#5f27cd', flex:1, height:50}}/>
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+6. Membuat Column
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View style={{flexDirection:'column'}}>
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#feca57', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#1dd1a1', flex:1, height:50}}/>
+   >          <View style={{backgroundColor:'#5f27cd', flex:1, height:50}}/>
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+7. Membuat pembagian Flex dan FlexOrientasi bawah
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View style={{flexDirection:'row', backgroundColor:'c8d6e5', alignItems:'flex-end', }}>    --> backgroundColor ialah warna dari viewInduk yg besarnya mengikuti besar dari viewChild (yg memiliki ukuran paling besar).
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>  --> 1/10 dari screen
+   >          <View style={{backgroundColor:'#feca57', flex:2, height:150}}/>  --> 2/10 dari screen
+   >          <View style={{backgroundColor:'#1dd1a1', flex:3, height:200}}/>  --> 3/10 dari screen
+   >          <View style={{backgroundColor:'#5f27cd', flex:4, height:250}}/>  --> 4/10 dari screen  --> besarnya viewInduk mengikuti besar dari viewChild terbesar
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;   
+   
+8. Membuat pembagian Flex dan FlexOrientasi tengah dari viewInduk
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View style={{flexDirection:'row', backgroundColor:'c8d6e5', alignItems:'center'}}>    --> backgroundColor ialah warna dari viewInduk yg besarnya mengikuti besar dari viewChild (yg memiliki ukuran paling besar)
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>  --> 1/10 dari screen
+   >          <View style={{backgroundColor:'#feca57', flex:2, height:150}}/>  --> 2/10 dari screen
+   >          <View style={{backgroundColor:'#1dd1a1', flex:3, height:200}}/>  --> 3/10 dari screen
+   >          <View style={{backgroundColor:'#5f27cd', flex:4, height:250}}/>  --> 4/10 dari screen  --> besarnya viewInduk mengikuti besar dari viewChild terbesar
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+9. Membuat pembagian Flex dan FlexOrientasi atas
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      <View style={{flexDirection:'row', backgroundColor:'c8d6e5', alignItems:'flex-start', }}>    --> backgroundColor ialah warna dari viewInduk yg besarnya mengikuti besar dari viewChild (yg memiliki ukuran paling besar).
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>  --> 1/10 dari screen
+   >          <View style={{backgroundColor:'#feca57', flex:2, height:150}}/>  --> 2/10 dari screen
+   >          <View style={{backgroundColor:'#1dd1a1', flex:3, height:200}}/>  --> 3/10 dari screen
+   >          <View style={{backgroundColor:'#5f27cd', flex:4, height:250}}/>  --> 4/10 dari screen  --> besarnya viewInduk mengikuti besar dari viewChild terbesar
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
+   
+10.Membuat jarak antar viewChild
+   > import React from 'react';
+   > import {Text, View} from 'react-native';
+   > import MateriFlexBox from './MateriFlexBox'; ----> sesuai letak filenya
+   >
+   > const App = () => {
+   >    return {
+   >      /* backgroundColor ialah warna dari viewInduk yg besarnya mengikuti besar dari viewChild (yg memiliki ukuran paling besar) 
+   >         kita bisa menggunakan justifyContent:'space-between' atau justifyContent:'space-around untuk memberi jarak antar viewChild
+   >         bedanya space-around akan memberikan jarak dikiri dan kanan dari screen ke viewChild
+   >      */
+   >      <View style={{flexDirection:'row', backgroundColor:'c8d6e5', alignItems:'flex-end', justifyContent:'space-between' }}>
+   >          <View style={{backgroundColor:'#ee5253', flex:1, height:50}}/>  --> 1/10 dari screen
+   >          <View style={{backgroundColor:'#feca57', flex:2, height:150}}/>  --> 2/10 dari screen
+   >          <View style={{backgroundColor:'#1dd1a1', flex:3, height:200}}/>  --> 3/10 dari screen
+   >          <View style={{backgroundColor:'#5f27cd', flex:4, height:250}}/>  --> 4/10 dari screen  --> besarnya viewInduk mengikuti besar dari viewChild terbesar
+   >      </View>
+   >    }
+   > }
+   >
+   > export default App;
