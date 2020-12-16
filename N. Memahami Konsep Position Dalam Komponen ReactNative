@@ -1,0 +1,39 @@
+Hollaa, tetap semangat belajar dan hasilkan banyak karya ya...
+Pada modul ini kita akan membahas teknik menentukan position dalam react native.
+btw, kita perlu paham dulu nih, gambaran position dalam real-project itu seperti apa.. Ok mengahayal sejenak..
+- Untuk mendapat gambaran tentang penerapan teknik position, maka coba bayangkan icon kecil dalam beranda IG mu,
+  ada gambar yg menunjukan postingan itu memiliki banyak gambar,
+- Atau contoh lainnya, coba kamu lihat pada e-commerce, pada keranjang belanja kamu akan melihat notif yg mennginformasikan jumlah belanjaan
+  yg sudah kamu keep,
+  
+  Oke intro -nya cukup, sekarang kita lanjut belajar...
+  
+  1.  Membuat Component dengan cepat menggunakan extension ES7
+      Biasanya saat kita membuat sebuah kelas new.js kita harus mengimport React dan membuat functional secara manual.
+      Kini dengan bantuan extension ES7 kita dapat mempercepat kerja kita dengan :
+      - Install ES7 React/Redux...
+      - Lalu ketik 'rnf' (tanpa petik) -> enter
+      - maka kita akan dibuatkan kebutuhan Reactnative secara cepat.
+  2.  Export gambar dari figma
+      - Go to web figma.com/designmu
+      - pilih gamba yg ingin di export -> tentukan jenis file, dan ukuran -> preview -> export -> simpan pada folder projek
+  3.  Import gambar dan setting style pada React Native
+      Nah, kalau sejauh ini kamu masih menggunakan teknik inline untuk menghias komponen react-native mu, maka sekarang kamu harus tau, kalau
+      kita bisa menggunakan teknik internal untuk menghias komponen pada file react-native kita.
+      - Setelah menyimpan gambar pada folder
+      - Import gambar seperti biasa, dan arahkan pada file gambar.
+      - Lalu panggil <Image /> kedalam <View> </View>
+      - Panggil identitas gambar :
+      
+        > import gambar from './gambar.png';
+        >
+        > const namaFunctional =()=> {
+        >   return (
+        >     <View>
+        >       <Image source={gambar} style={styles.hiasGambar} />
+        >     </View>
+        >   )
+        > }
+        
+      - Perhatikan style pada <Image /> itu adalah teknik yg bisa kita pakai apabila kita dekalrasi style secara internal (dalm satu file)
+      menit 5.56
