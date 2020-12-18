@@ -1,0 +1,14 @@
+Haii jumpa lagi,,.
+Dalam mdoul ini, kita akan sedikit bahas terkait struktur projek.
+
+Agar project kita mudah untuk diperbaiki dan dikembangkan dikemudian hari, maka diperlukan adanya kelolaan folder yang baik.
+baiklah berikut, strukturnya....
+a. Kita pisahkan semua file konfigurasi asli dari React.
+b. src/App.js  -> untuk memuat file App.js kita, setelah ini dont forget untuk merubah url App.js menjadi -> './src/App.js';
+c. src/pages  -> untuk memuat berbagai macam halaman yg terdapat pada projek yg sedang kita bangun
+d. src/pages/home/index.js -> kita perlu mengingat kalau setiap folder didalam page defaultnyamembaca index.js
+   maka kita buat Home/index.js ,, hal ini berlaku untuk semua subfolder didalam folder pages.
+e. src/asset/img -> untuk memuat semua gambar
+f/ src/asset/icon -> untuk memuat semua icon
+
+*penting untuk kita ingat selalu, bahwa setiap melakukan berubahan url pada projek react, kita harus selalu ingat untuk merubah url
