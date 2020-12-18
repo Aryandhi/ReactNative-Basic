@@ -16,7 +16,7 @@ btw, kita perlu paham dulu nih, gambaran position dalam real-project itu seperti
       - maka kita akan dibuatkan kebutuhan Reactnative secara cepat.
   2.  Export gambar dari figma
       - Go to web figma.com/designmu
-      - pilih gamba yg ingin di export -> tentukan jenis file, dan ukuran -> preview -> export -> simpan pada folder projek
+      - pilih gambar yg ingin di export -> tentukan jenis file, dan ukuran -> preview -> export -> simpan pada folder projek
   3.  Import gambar dan setting style pada React Native
       Nah, kalau sejauh ini kamu masih menggunakan teknik inline untuk menghias komponen react-native mu, maka sekarang kamu harus tau, kalau
       kita bisa menggunakan teknik internal untuk menghias komponen pada file react-native kita.
@@ -34,6 +34,27 @@ btw, kita perlu paham dulu nih, gambaran position dalam real-project itu seperti
         >     </View>
         >   )
         > }
+        >
+        > export default namaFunctional;
+        >
+        > // otomatis digenerate
+        > const style = StyleSheet.create({
+        >     hiasGambar : {
+        >         /* Deklarasi style gambar */
+        >     }
+        >   }
+        > );
         
-      - Perhatikan style pada <Image /> itu adalah teknik yg bisa kita pakai apabila kita dekalrasi style secara internal (dalm satu file)
-      menit 5.56
+      - Perhatikan styles pada <Image /> itu adalah teknik yg dapat kita pakai apabila kita dekalrasi style secara internal (dalm satu file)
+      - Kita dapat memanggil banyak style dengan ketik nama style tsb.
+      
+4. Membuat notif dan mengatur position
+   - Cara untuk membuat notif cukup mudah, dengan mendklarasi style secara umum, dan memanggil nama style
+     lalu kita dapat menambahkan 
+     > position : absolute
+     pada style.hiasGambar
+     
+   - Lalu kita kita deklarasi juga
+     > position : relative
+     pada pembungkus notif tersebut, umumnya oembungkus adalah <View> </View>
+   
