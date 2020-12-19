@@ -1,0 +1,56 @@
+Hai hai haii..
+pada modul ini kita akan melanjutkan materi tentang membuat komponen dinamis dengan state.
+state sendiri dibedakan menjadi 2, yakni
+- StateDinamis untuk component functional
+- StateDinamis untuk component class
+
+1. Kita buat StateDinamis.js dan di import ke App.js
+2. Pada StateDinamis.js kita buat struktur seperti biasa, lalu kita coba untuk membuat button dan sebuah Text yg berisi angka.
+   Jika button tersebut ditekan maka angka tsb akan otomatis bertambah.
+   
+   > import
+   >
+   > const Counter = () => {
+   > // membuat inisial value
+   >      const [number, setNumber] = useState(0);   //angka nol merupakan inisial value yg kita tetapkan sesuai kebutuhan
+   >    return (
+   >
+   >        <Text> [number] </Text>
+   >        <button title="Tambah" onPress={() => setNumber(number + 1) }/>
+   >    )
+   > }
+   >
+   > const StateDinamis = () => {
+   >  return (
+   >    <View>
+   >        <Text> Materi Component Dinamis dengan State </Text>
+   >        <Counter />
+   >    </View>
+   >  )
+   > }
+   
+3. Membuat state dengan class component
+   > import
+   >
+   > class CounterClass extends Component {
+   >    const = {
+   >      number : 0, 
+   >    }
+   >    render() {
+   >        return (
+   >           <View>
+   >               <Text> {this.state.number} </Text>
+   >               <button title="Tambah" onPress={() => this.setState({number : this.state.number+1}) }/>
+   >           </View>
+   >        )
+   >    }
+   > }
+   >
+   > const StateDinamis = () => {
+   >  return (
+   >    <View>
+   >        <Text> Materi Component Dinamis dengan State </Text>
+   >        <Counter />
+   >    </View>
+   >  )
+   > }
