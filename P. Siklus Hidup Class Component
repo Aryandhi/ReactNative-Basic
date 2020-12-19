@@ -1,0 +1,57 @@
+Kali ini kita akan melanjutkan perjalanan panjang dengan membahas siklus hidup class component.
+
+Sebuah aplikasi tentunya tidak hanya menggunakan UI nya saja, tetapi akan ada fungsi-fungsi tertentu yang harus kita pahami.
+Sebelum kita memahami fungsi-fungsi tersebut, kita akan mulai dengan memahami sklus hidup dari Component yg kita buat.
+Terdapat 2 siklus hidup (life cycle) yaitu
+- Siklus hidup Functional Component
+- Siklus hidup class Compoenent
+
+untuk membantu kita memami lifecycle ini, kita memerlukan library tambahan yakni react native debuger.
+untuk memperlajari react native debuger, temen-teman bisa kunjungi -> https://github.com/jhen0409/react-native-debugger
+
+atau kita dapat menggunakan browser, caranya :
+- buka browser -> ketikaurl localost:8081/debuger/ui
+- buka inspect
+- pilih console
+
+1. Hal utama yg perlu kita pahami tentang lifecycle component ialah
+   - Mounting -> saat ketika komponen tampil
+     beberapa metode yg dapat kita gunakan untuk memahami life-cycle :
+     a. constuctor()
+     
+        > constructor(props) {
+        >   super(props);
+        >   console.log('==> constructor');
+        > }
+        
+    b. render()
+       
+       > render() {
+       >    console.log('==> render');
+       > }
+       
+    c. ComponentDidMount()
+       /* 
+          Kita bisa tulis dimana saja.
+          metode ComponentDidMount() walaupun kitatulis diatas dari line,
+          mesin tetap membaca render() yg lebih dulu 
+       */
+          
+       > ComponentDidMount() {
+       >    console.log('==> component did mount');
+       > }
+       
+   - Updating -> saat ketika komponen berubah
+     a. render()
+     b. ComponentDidUpdate()
+        komponen ini berlau saat terjadi updating pada tampilan, selain itu (tidak terjadi perubahan) komponen ini tidak berkerja.
+        lalu, updating bagaimana yg memerlukan komponen didUpdating ?
+        ComponentDidUpdating() dapat terpanggil saat terdapat perubahan secara dinamis pada tampilan aplikasi kita.
+        bahasan updating component secara dinamai akan dibahas pada modul sleanjutnya.
+        
+   - Umounting -> saati ketika komponen hilang
+     a. ComponentWillUnmount()
+        Komponen ini akan muncul bila komponen-nya hilang
+        
+ Pentingnya kita memahami siklus hidup dari sebuah komponen...
+ manfaatnya akan terasa saat projek kita sudah cukup besar dan memiliki fungsi-fungsi untuk mendukung kinerja apps kita.
