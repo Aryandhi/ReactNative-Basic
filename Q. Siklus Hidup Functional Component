@@ -1,0 +1,13 @@
+Setelah kita belajar siklus hidup class Component. sekarang kita akan lanjutkan untuk memahami life-cycle functional Component.
+mari kita mulaiiiii...........
+
+1. Dalam functional component kita cukup menggunakan 1 metode, yakni :
+   a. Mounting
+       > useEffect{() => {
+       >    console.log('did mount');
+       > }, []};
+   
+   b. Updating
+      > return () = => {
+      > >   console.log('didi update');
+   c. Unmounting
