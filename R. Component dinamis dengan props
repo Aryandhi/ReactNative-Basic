@@ -1,0 +1,25 @@
+Kembali kita untuk berlatih membuat komponen yg dinamis dengan menggunakan props.
+Teknik ini menjadi sangat penting karena dapat membantu kita dalam berkerja.
+Kapan perapannya ?
+Tentunya saat kita memiliki komponen yang berulang (ex.story di instagram)
+Kita bisa membuatnya efisien dengan memberikan params yg bernilai values pada functional component.
+
+> const ContohProps = (props) => {
+>   return {
+>     <Image source={{props.gambar}}, style={xxxxx} />
+>     <Text> {props.judul }</Text>
+>   }
+> }
+>
+>
+> const App = () => {
+>   return {
+>     <ScrollView horizontal>
+>       <View>
+>         <ContohProps judul='xxxx', gambar='ketikLink'/>
+>         <ContohProps judul='xxxx', gambar='ketikLink'/>
+>         <ContohProps judul='xxxx', gambar='ketikLink'/>
+>       </View>
+>     </ScrollView>
+>   }
+> }
