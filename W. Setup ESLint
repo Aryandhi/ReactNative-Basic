@@ -1,0 +1,9 @@
+haii,,
+diakhir modul ini kita akan tambah wawasan dengan install esLint pada project, supaya apa ?
+Agar codingan kita rapih dan standar profesional.
+Yuk kita mulai...
+
+1. Install EsLint
+   a. Buka npm cmd -> ketik npm install -g eslint
+   b. Bila error maka rubah syntax cmd nya menjadi sudo npm install -g eslint
+   
