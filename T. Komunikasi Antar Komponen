@@ -1,0 +1,72 @@
+Semangat dan Terus Semangaaat...
+Ayo kita lanjutkan belajar, kali ini bahasan kita terkait komunikasi antar komponen
+
+Komunikasi antar kompnen ini dapat muncul apabila ada 2 component yg terpisah, namun value ingin saling terhubung satusama lain.
+
+1. Membuat folder baru untuk memisahkan Component
+   a. Buat folder ./src/components    //fungsinya untuk menyimpan berbagai macam komponen yg ingin kita pakai untuk komunikasi
+   b. Buat folder ./src/component/Cart/index.js
+   c. Buat folder ./src/component/Product/index.js    //atau disesuaikan kebutuhan
+      
+      **Apa itu 2 komponen terpisah, berikut adalah contoh 2 komponen terpisah
+        > import
+        >
+        > const App =()=> {
+        >   return(
+        >     <ScrollView>
+        >         <Cart />
+        >         <Product />
+        >     </ScrollView>
+        >   )
+        > }
+        
+2. Membuat design pada masing" component dan panggil masing" komponen kedalam App.js (seperti contoh diatas)
+3. Fokus ke component <Cart /> membuat komponen cart dengan props
+   > import
+   >
+   > const Cart = (props) => {
+   >    return(
+   >      <View>
+   >        <Text style={}> {props.quantity} </Text>
+   >      </View>
+   >    )
+   > }
+   
+   Lalu isi params props pada App.js
+   > import
+   >
+   > const Comunication = () => {
+   >    const [totalProduct, setTotalProduct] = useState(0)
+   >    return(
+   >      <View>
+   >        <Cart quantity= {totalProduct} />    // masih bersifat statis, untuk menjadi dinamis nilai {40} akan diganti dengan totalProduct
+   >      </View>
+   >    )
+   > }
+   
+4. Menyediakan fungsi klik, ini kita pakai saat design yg kita buat tidak menggunakan <button> </button> melainkan kita menggunakan style untuk membuat re-presentasi button
+   > import
+   >
+   > const Product = (props) => {
+   >    return(
+   >      <View>
+   >        <TouchableOpacity onPress={props.onButtonPress}>    // fungsi onPress kita serahkan ke Component yg terpanggil didalam Comunication.js
+   >          <View style={contohRepresentasiButton}>
+   >            <Text> Beli </Text>
+   >          </View>
+   >        </TouchableOpacity>
+   >      </View>
+   >    )
+   > }
+   
+   > import
+   >
+   > const Comunication = () => {
+   >    const [totalProduct, setTotalProduct] = useState(0)
+   >    return(
+   >      <View>
+   >        <Cart quantity= {totalProduct} />    // masih bersifat statis, untuk menjadi dinamis nilai {40} akan diganti dengan totalProduct
+   >        <Product onButtonPress={() => setTotalProduct(totalProduct + 1)}/>
+   >      </View>
+   >    )
+   > }
