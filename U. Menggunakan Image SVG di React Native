@@ -1,0 +1,37 @@
+Hallo reader...
+pada modul ini kita akan membahas cara agar React native support file Image berType SVG.
+Karena secara default, tanpa adanya library ini React native belum support file SVG, bagaimana caranya ??? Kuy Lets get started !
+
+
+1. Install library svg
+   a. kita search https://github.com/react-native-svg/react-native-svg -> dan pilih metode automaticly
+      note, metode automaticly hanya bisa digunakan pada react-native version >= 6.0
+   b. Lalu install dengan npm cmd 'npm install react-native-svg' (tanpa petik)
+   c. Untuk menggunakan svg dalam bentuk file (file tersimpan didalam project kita)
+      - lebih dulu kita install 'npm install --dev react-native-svg-transformer'
+      - lalu kita buka project yg sedang developing dan paste code pada metro.config.js
+        
+        const { getDefaultConfig } = require('metro-config');
+
+        module.exports = (async () => {
+          const {
+            resolver: { sourceExts, assetExts },
+          } = await getDefaultConfig();
+          return {
+            transformer: {
+              babelTransformerPath: require.resolve('react-native-svg-transformer'),
+            },
+            resolver: {
+              assetExts: assetExts.filter(ext => ext !== 'svg'),
+              sourceExts: [...sourceExts, 'svg'],
+            },
+          };
+        })();
+        
+        atau bisa langsung lihat pada docs
+      - setelah kita paste, kita harus delete config yanglama -> save
+      
+   d. Next step kita bisa buat folder dan file index.js yg baru lalu, kita import ke App.js
+   e. Setelah berasil ter-import kita bisa download dari undraw.co
+      lalu save file.svg tersebut didalam projek kita.
+      dan lakukan import file seperti biasa didalam App.js
