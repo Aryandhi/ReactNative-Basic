@@ -67,3 +67,5 @@ Step 5 Melakukan perubahan terus menerus
   - git add .  (menampung semua perubahan yg terjadi pada projek)
   - git commit (memberi deskripsi terhadap perubahan)
   - git push (mengirim perubahan)
+  - git pull origin master (untuk ambil perubahan, dan merge ke main, update folder)
+  - git fetch origin master (untuk ambil perubahan)
